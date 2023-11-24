@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      name: gateway
+      username: root
+      password: s3cr3t
+#      uri: http://root:s3cr3t@localhost:8888
+      discovery:
+        service-id: config
+        enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
